@@ -6,8 +6,8 @@ const Tab= createBottomTabNavigator();
 const Tabs = ()=>{
     return(
         <Tab.Navigator>
-            <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Crop" component={InitialScreen} />
+            <Tab.Screen name="Home" component={InitialScreen} />
+            <Tab.Screen name="Crop" component={HomeScreen} />
         
         </Tab.Navigator>
     );
