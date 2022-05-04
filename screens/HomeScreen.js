@@ -21,15 +21,14 @@ render(){
   return (
     
     <View style={styles.container}>
-        <View style={styles.rect2StackStack}>
-          <View style={styles.rect2Stack}>
+        
           <View style={styles.rect}>
           <Image
           style={ styles.image1 }
           resizeMode='contain'
-          source={ require('../assets/dst.png') }
+          source={ require('../assets/logoiot.png') }
         /> 
-            <Text style={styles.loremIpsum}></Text>
+            
               
               
                 </View> 
@@ -61,8 +60,7 @@ render(){
              
               
            </View>
-        </View>
-      </View>
+      
       
       
   );
@@ -87,26 +85,18 @@ const styles = StyleSheet.create({
 
     rect: {
      
-      top: 40,
+      
       width: 320,
       height: 120,
-      position: 'relative',
-      backgroundColor: '#ffffff',
-      borderRadius: 15,
-      shadowColor: 'rgba(0,0,0,1)',
-      shadowOffset: {
-        width: 0,
-        height: 0
-      },
-     
-    left: 12,
-
+      position:'absolute',
+      marginLeft:13
+      
   },
+
+
   image1:{
-    flex:1,
-    alignItems:'center',
-    marginRight:150
-    
+    width:'30%',
+    marginTop:-50, 
   },
 
   loremIpsum: {
@@ -121,8 +111,8 @@ const styles = StyleSheet.create({
     height: 200,
     backgroundColor: 'rgba(255,255,255,1)',
     borderRadius: 15,
-    marginTop: 200,
-    marginLeft: 12,
+    marginTop: 120,
+    marginLeft: 18,
     shadowColor: 'rgba(0,0,0,1)',
     shadowOffset: {
       width: 1,
@@ -139,18 +129,18 @@ const styles = StyleSheet.create({
     marginTop: 14,
     marginLeft: 21
   },
-  rect2Stack: {
-    top: 0,
-    left: 57,
-    width: 402,
-    height: 647,
-    position: 'absolute'
-  },
-  rect2StackStack: {
-    width: 459,
-    height: 692,
-    marginLeft: -50
-  },
+  // rect2Stack: {
+  //   top: 0,
+  //   left: 57,
+  //   width: 402,
+  //   height: 647,
+  //   position: 'absolute'
+  // },
+  // rect2StackStack: {
+  //   width: 459,
+  //   height: 692,
+  //   marginLeft: -50
+  // },
   
   rect6:{
     

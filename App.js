@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from './navigation/Tabs';
 
+
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window')
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -19,8 +21,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: SCREEN_WIDTH,
+                    height: 0,
+                    borderTopColor: "blue",
+                    borderTopWidth: SCREEN_HEIGHT / 2,
+                    borderRightWidth: SCREEN_WIDTH,
+                    borderRightColor: 'transparent'
   },
 });
