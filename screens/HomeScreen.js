@@ -21,45 +21,62 @@ render(){
   return (
     
     <View style={styles.container}>
+    <View style={styles.rect2StackStack}>
+      
+        <Image
+          source={require('../assets/pngwing.png')}
+          resizeMode='cover'
+          style={styles.rect2}
+        ></Image>
         
-          <View style={styles.rect}>
-          <Image
-          style={ styles.image1 }
-          resizeMode='contain'
-          source={ require('../assets/logoiot.png') }
-        /> 
+        
+          <View style={styles.rect4}>
+            <Text style={styles.healYourCrop}>Heal Your Crop!</Text>
+            <View style={styles.image3Row}>
+              <Image
+                source={require('../assets/cameralogo.jpg')}
+                resizeMode='contain'
+                style={styles.image3}
+              ></Image>
+              <Image
+                source={require('../assets/next.png')}
+                resizeMode='contain'
+                style={styles.image6}
+              ></Image>
+              <Image
+                source={require('../assets/diagnose.jpg')}
+                resizeMode='contain'
+                style={styles.image4}
+              ></Image>
+              <Image
+                source={require('../assets/next.png')}
+                resizeMode='contain'
+                style={styles.image7}
+              ></Image>
+              <Image
+                source={require('../assets/Heal.jpg')}
+                resizeMode='contain'
+                style={styles.image5}
+              ></Image>
+            </View>
+            <Camera navigation={this.props.navigation} />
+          </View>
+          <View style={styles.rect6}>
+            <Text style={styles.previousPictures}>Previous pictures</Text>
             
-              
-              
-                </View> 
-                
-                
-                <View style={styles.rect4}>
-                <Text style={styles.healYourCrop}>Heal Your Plant !</Text>
-                
-                <View style={styles.rect6}>
-
-                <FontAwesome name="camera" size={30} color="red"   />
-                
-                
-                <MaterialIcons name="healing" size={30} color="red"  />
-                
-                <FontAwesome5 name="diagnoses" size={30} color="red" />
-                
-                </View>
-                
-                <Camera navigation={this.props.navigation} />
-  
-
-
-               
-                
-                </View>
-                
-                
-             
-              
-           </View>
+          </View>
+          
+        
+        
+        <Image
+          source={require('../assets/logoiot.png')}
+          resizeMode='contain'
+          style={styles.image10}
+        ></Image>
+      </View>
+      
+    </View>
+ 
       
       
       
@@ -73,34 +90,34 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightblue'
-    
+    backgroundColor: 'white'
   },
   rect2: {
-    top: -40,
-    left: 110,
-    height: 350,
+    
+    
+    height: 600,
     position: 'absolute'
   },
 
-    rect: {
-     
-      
-      width: 320,
-      height: 120,
-      position:'absolute',
-      marginLeft:13
-      
+  rect: {
+    top: 90,
+    width: 278,
+    height: 513,
+    position: 'absolute',
+    backgroundColor: '#ffffff',
+    borderRadius: 35,
+    shadowColor: 'rgba(0,0,0,1)',
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    elevation: 7,
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    left: 28
   },
-
-
-  image1:{
-    width:'30%',
-    marginTop:-50, 
-  },
-
   loremIpsum: {
-    fontFamily:'sans-serif',
+    fontFamily: 'sans-serif',
     color: '#195F57',
     fontSize: 20,
     marginTop: 19,
@@ -110,9 +127,9 @@ const styles = StyleSheet.create({
     width: 320,
     height: 200,
     backgroundColor: 'rgba(255,255,255,1)',
-    borderRadius: 15,
-    marginTop: 120,
-    marginLeft: 18,
+    borderRadius: 27,
+    marginTop: 90,
+    marginLeft: 70,
     shadowColor: 'rgba(0,0,0,1)',
     shadowOffset: {
       width: 1,
@@ -129,33 +146,117 @@ const styles = StyleSheet.create({
     marginTop: 14,
     marginLeft: 21
   },
-  // rect2Stack: {
-  //   top: 0,
-  //   left: 57,
-  //   width: 402,
-  //   height: 647,
-  //   position: 'absolute'
-  // },
-  // rect2StackStack: {
-  //   width: 459,
-  //   height: 692,
-  //   marginLeft: -50
-  // },
-  
-  rect6:{
+  image3: {
+    width: 80,
+    height: 60,
     
-    flexDirection:'row',
-    marginTop:20,
-    marginLeft:15,
-    alignItems: 'center',
-    paddingHorizontal:40,
-   justifyContent: 'space-between',
-    
+    marginTop: 5
   },
-  rect7:{
-     marginTop:30,
+  image6: {
+    width: 20,
+    height: 34,
+    marginLeft: 10,
+    marginTop: 14
+  },
+  image4: {
+    width: 80,
+    height: 60,
+    marginLeft: 10,
+    marginTop: 3
+  },
+  image7: {
+    width: 20,
+    height: 30,
+    marginLeft: 2,
+    marginTop: 14
+  },
+  image5: {
+    width: 80,
+    height: 60,
+    marginLeft: 10
+  },
+  image3Row: {
+    height: 53,
+    flexDirection: 'row',
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 20
+  },
+  rect6: {
+    width: 320,
+    height: 200,
+    backgroundColor: 'rgba(255,255,255,1)',
+    borderRadius: 27,
+    marginTop: 19,
+    marginLeft: 70,
+    shadowColor: 'rgba(0,0,0,1)',
+    shadowOffset: {
+      width: 1,
+      height: 1
+    },
+    elevation: 5,
+    shadowOpacity: 0.16,
+    shadowRadius: 10
+  },
+  previousPictures: {
+    fontFamily: 'sans-serif',
+    color: '#195F57',
+    fontSize: 14,
+    marginTop: 9,
+    marginLeft: 14
   },
   
   
-
+  
+  
+  rect7: {
+    width: 238,
+    height: 126,
+    backgroundColor: 'rgba(255,255,255,1)',
+    borderRadius: 27,
+    marginTop: 17,
+    marginLeft: 22,
+    shadowColor: 'rgba(0,0,0,1)',
+    shadowOffset: {
+      width: 1,
+      height: 1
+    },
+    elevation: 5,
+    shadowOpacity: 0.16,
+    shadowRadius: 10
+  },
+  
+ 
+  
+  
+ 
+  image2: {
+    top: 492,
+    left: 270,
+    width: 131,
+    height: 155,
+    position: 'absolute'
+  },
+ 
+  image10: {
+    top: 20,
+    bottom: 20,
+    left: 40,
+    width: 120,
+    height: 50,
+    position: 'absolute'
+  },
+  rect2Stack: {
+    top: 0,
+    left: 57,
+    width: 402,
+    height: 647,
+    position: 'absolute'
+  },
+  
+  rect2StackStack: {
+    width: 459,
+    height: 692,
+    marginLeft: -50
+  }
 });

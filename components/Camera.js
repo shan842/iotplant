@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     marginLeft: 19
   },
   rect5: {
-    top: 1,
+    top: 25,
     left: 0,
     width: 201,
     height: 43,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     marginLeft: 84
   },
   image8: {
-    top: 0,
+    top: 22,
     left: 25,
     width: 25,
     height: 45,

@@ -21,81 +21,100 @@ const InitialScreen = ({navigation}) => {
   const theme = useTheme();
 
   return (
-    <ScrollView style={styles.container}>
-      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
-      <View style={styles.sliderContainer}>
-      
-        <Swiper
-          autoplay
-          horizontal={false}
-          height={150}
-          activeDotColor="#FF6347">
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/dst.png')}
-              resizeMode="contain"
-              style={styles.sliderImage1}
-            />
-          </View>
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/dstlogo.jpg')}
-              resizeMode="cover"
-              style={styles.sliderImage2}
-            />
-          </View>
-          <View style={styles.slide}>
-            <Image
-              source={require('../assets/ggsipu.png')}
-              resizeMode="cover"
-              style={styles.sliderImage3}
-            />
+    <View style={styles.container}>
+    <Image
+    source={require('../assets/pngwing.png')}
+    resizeMode='cover'
+    style={styles.rect2}
+  ></Image>
+ 
+  <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
+  <View style={styles.sliderContainer}>
+  
+    <Swiper
+      autoplay
+      horizontal={false}
+      height={150}
+      activeDotColor="#FF6347">
+      <View style={styles.slide}>
+        <Image
+          source={require('../assets/dst.png')}
+          resizeMode="contain"
+          style={styles.sliderImage1}
+        />
+      </View>
+      <View style={styles.slide}>
+        <Image
+          source={require('../assets/iari.png')}
+          resizeMode="cover"
+          style={styles.sliderImage2}
+        />
+      </View>
+      <View style={styles.slide}>
+        <Image
+          source={require('../assets/ggsipu.png')}
+          resizeMode="cover"
+          style={styles.sliderImage3}
+        />
 
+       
+      
+      </View>
+    </Swiper>
+    </View>
+    <View style={styles.categoryContainer}>
+      <View  style={styles.logoContainer}>
+      <Image
+          source={require('../assets/logoiot.png')}
+          resizeMode="contain"
+          style={styles.logoimage}
+        />
+        <View  style={styles.textContainer}>
+        <Text style={styles.plantiot}>
+        Welcome To 
+      </Text>
+      <Text style={styles.plantiot1}>
+      PlantIoT-IPU 
+    </Text>
+    </View>
+      </View>
+  </View>
+  <View
+     style={styles.buttonStyle}>
+  <Button 
+  title="Camera"
+  onPress={() =>
+    navigation.navigate('Crop')
+  }
+/>
+</View>
+<View
+     style={styles.buttonStyle1}>
+  <Button 
+  title="IoT"
+  onPress={() =>
+    navigation.navigate('Iot')
+  }
+/>
+
+              
+            </View>
            
           
-          </View>
-        </Swiper>
-      </View>
-        <View style={styles.categoryContainer}>
-          <View  style={styles.logoContainer}>
-          <Image
-              source={require('../assets/logoiot.png')}
-              resizeMode="contain"
-              style={styles.logoimage}
-            />
-            <Text style={styles.plantiot}>
-            Welcome To 
-          </Text>
-          <Text style={styles.plantiot1}>
-          PlantIoT-IPU 
-        </Text>
+            
           
-          </View>
-      </View>
-      <View
-         style={styles.buttonStyle}>
-      <Button 
-      title="Camera"
-      onPress={() =>
-        navigation.navigate('Crop')
-      }
-    />
-    </View>
-    <View
-         style={styles.buttonStyle1}>
-      <Button 
-      title="IoT"
-      onPress={() =>
-        navigation.navigate('Crop')
-      }
-    />
-    </View>
-    
-      </ScrollView>
+          
+            
+            
+          
+        
+        
+       
       
-      
-      );
-    }
+    </View>
+    );
+  }
+
   
 
 export default InitialScreen;
@@ -103,7 +122,15 @@ export default InitialScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightblue'
+    backgroundColor:'white',
+    
+  },
+  rect2: {
+    
+    
+    height: 600,
+   
+    position: 'absolute'
   },
   sliderContainer: {
     width: 330,
@@ -127,7 +154,7 @@ const styles = StyleSheet.create({
     alignSelf:'center'
   },
   sliderImage2: {
-    height:'90%',
+    height:'100%',
     width:'60%',
     alignSelf:'center',
     justifyContent:'space-around'
@@ -165,6 +192,7 @@ const styles = StyleSheet.create({
   plantiot1:{
     alignSelf:'center',
     width:'100%',
+    color:'red',
     fontSize:40,
     marginLeft:'40%',
     
@@ -192,5 +220,8 @@ const styles = StyleSheet.create({
     marginTop:-50,
     width:100
     
+  },
+  textContainer:{
+    bottom:20
   }
 });
