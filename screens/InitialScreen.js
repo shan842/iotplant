@@ -99,17 +99,7 @@ const InitialScreen = ({navigation}) => {
 
               
             </View>
-           
           
-            
-          
-          
-            
-            
-          
-        
-        
-       
       
     </View>
     );
@@ -124,13 +114,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:'white',
     
+    
   },
   rect2: {
     
     
     height: 600,
    
-    position: 'absolute'
+    position: 'absolute',
+    opacity: .7,
+   // zIndex: 1,
+    
   },
   sliderContainer: {
     width: 330,

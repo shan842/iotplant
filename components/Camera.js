@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
-
+import axios from 'axios';
 import Modal from 'react-native-modal';
 
 import Loader from './Loader';
@@ -73,7 +73,36 @@ export default class Camera extends Component {
       Alert.alert('You need to give permissions');
     }
   };
+  onUpload = async (image) => {
+    const data = new FormData();
+    data.append('file', image);
+    data.append('upload_preset', 'ipuplantApp');
+    data.append('api_key', '838217371892322');
 
+    try {
+      this.setState({
+        isLoading: true
+      });
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/xyz/image/upload`,{
+          method:"post",
+          body:data
+        }).then (res=>res.json()).
+        then(data=>{
+          console.log(data)
+        })
+      
+      if (response) {
+        this.setState({
+          isLoading: false
+        });
+        console.log(response.data);
+        this.props.navigation.navigate('PredictionScreen');
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
   
 
   onShowModal = () => {
@@ -89,7 +118,7 @@ export default class Camera extends Component {
         <TouchableOpacity
           style={styles.rect5}
           onPress={() => {
-            // this.props.navigation.navigate('PredictionScreen');
+           //  this.props.navigation.navigate('PredictionScreen');
             this.onShowModal();
           }}
         >

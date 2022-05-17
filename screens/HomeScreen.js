@@ -63,10 +63,15 @@ render(){
           </View>
           <View style={styles.rect6}>
             <Text style={styles.previousPictures}>Previous pictures</Text>
-            
+           
+                <View style={styles.rect8Row}>
+                  <View style={styles.rect8}></View>
+                  <View style={styles.rect14}></View>
+                  <View style={styles.rect9}></View>
+                  <View style={styles.rect11}></View>
           </View>
           
-        
+        </View>
         
         <Image
           source={require('../assets/logoiot.png')}
@@ -96,7 +101,8 @@ const styles = StyleSheet.create({
     
     
     height: 600,
-    position: 'absolute'
+    position: 'absolute',
+    opacity:.7,
   },
 
   rect: {
@@ -205,7 +211,13 @@ const styles = StyleSheet.create({
     marginTop: 9,
     marginLeft: 14
   },
-  
+  rect8Row: {
+    height: 70,
+    flexDirection: 'row',
+    marginTop: 20,
+    marginLeft: 17,
+    marginRight: 14
+  },
   
   
   
@@ -236,6 +248,33 @@ const styles = StyleSheet.create({
     width: 131,
     height: 155,
     position: 'absolute'
+  },
+  rect8: {
+    width: 35,
+    height: 36,
+    backgroundColor: '#E6E6E6',
+    borderRadius: 5
+  },
+  rect14: {
+    width: 35,
+    height: 36,
+    backgroundColor: '#E6E6E6',
+    borderRadius: 5,
+    marginLeft: 21
+  },
+  rect9: {
+    width: 35,
+    height: 36,
+    backgroundColor: '#E6E6E6',
+    borderRadius: 5,
+    marginLeft: 23
+  },
+  rect11: {
+    width: 35,
+    height: 36,
+    backgroundColor: '#E6E6E6',
+    borderRadius: 5,
+    marginLeft: 23
   },
  
   image10: {
